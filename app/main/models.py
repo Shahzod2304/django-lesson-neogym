@@ -44,7 +44,7 @@ class HomeContent(models.Model):
 
 class Trainer(models.Model):
     full_name = models.CharField(max_length=50)
-    img = models.ImageField(upload_to='images/trainer', default = '/static/images/defoult-avatar-icon', blank = True, null = True)
+    img = models.ImageField(upload_to='images/trainer', default = '/static/images/default-avatar-icon.jpg', blank = True, null = True)
     facebook = models.URLField(blank = True, null = True)
     twitter = models.URLField(blank = True, null = True)
     instagram = models.URLField(blank = True, null = True)
