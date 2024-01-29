@@ -67,9 +67,9 @@ class Contact(models.Model):
 
 class Footer(models.Model):
     location = models.URLField()
-    phone_number = models.CharField(max_length = 50)
-    mail = models.CharField(max_length = 50)
-    footer_text = models.CharField(max_length=100)
+    phone_number = models.IntegerField()
+    email = models.EmailField()
+    text = models.CharField(max_length=100)
 
     def __str__(self):
         return "Нижняя часть сайта"
