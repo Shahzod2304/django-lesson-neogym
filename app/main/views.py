@@ -6,11 +6,13 @@ from .models import *
 def Main(request):
     context = {
         'home_data' : Home.objects.all(),
-        'why_data' : Why.objects.all(),
-        'home_content_data' : HomeContent.objects.all(),
-        'active_page' : 'main',
-    }
+        'why_data' : Why.objects.all().order_by('-id')[:4],
     
+        'home_content_data' : HomeContent.objects.last(),
+        'active_page' : 'main',
+       
+    }
+    print(Why.objects.all()[0:3].values())
     return render(request, 'index.html', context)
 
 def Contact(request):

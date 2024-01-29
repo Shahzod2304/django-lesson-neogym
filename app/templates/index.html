@@ -90,14 +90,14 @@
     <div class="container">
 
       <div class="row">
-        {% for home_content_item in  home_content_data%}
+        {% if home_content_data %}
           <div class="col-md-12 mx-auto">
             <div class="detail-box">
               <h2>
-                {{ home_content_item.title }}
+                {{ home_content_data.title }}
               </h2>
               <p>
-                {{ home_content_item.disc }}
+                {{ home_content_data.disc }}
               </p>
               <div class="btn-box">
                 <a href="">
@@ -106,7 +106,7 @@
               </div>
             </div>
           </div>
-        {% endfor %}
+        {% endif %}
       </div>
 
     </div>
